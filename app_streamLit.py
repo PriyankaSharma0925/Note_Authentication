@@ -27,10 +27,10 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    variance=int(st.text_input("Variance","Type here"))
-    skewness = int(st.text_input("Skewness", "Type here"))
-    curtosis = int(st.text_input("Curtosis", "Type here"))
-    entropy = int(st.text_input("Entropy", "Type here"))
+    variance=int(float(st.text_input("Variance","Type here")))
+    skewness = int(float(st.text_input("Skewness", "Type here")))
+    curtosis = int(float(st.text_input("Curtosis", "Type here")))
+    entropy = int(float(st.text_input("Entropy", "Type here")))
     result=""
     if st.button("Predict"):
         result=predict_note_authentication(variance,skewness,curtosis,entropy)
